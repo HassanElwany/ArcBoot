@@ -1,0 +1,75 @@
+/* Navbar styling */
+.navbar {
+  background: linear-gradient(
+    to right,
+    #000000 0%,
+    #1a237e 20%,
+    #0277bd 40%,
+    #00838f 60%,
+    #004d40 80%,
+    #000000 100%
+  ) !important;
+  background-size: 200% 100% !important;
+  animation: shine 4s ease-in-out infinite;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Add an overlay to enhance the gradient effect */
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(255, 255, 255, 0.1) 30%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 70%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Ensure navbar links are visible against the gradient */
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.navbar-light .navbar-brand {
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
