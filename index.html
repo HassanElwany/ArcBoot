@@ -63,6 +63,55 @@
       </div>
     </nav>
 
+    <!-- Home Hero Section -->
+
+    <section
+      id="home"
+      class="hero-section d-flex align-items-center min-vh-100 position-relative"
+    >
+      <!-- Placeholder Image -->
+      <img
+        src="https://via.placeholder.com/1920x1080?text=Construction"
+        class="placeholder-image img-fluid w-100 position-absolute"
+        alt="Construction background"
+        style="z-index: 0"
+      />
+      <!-- Video Background -->
+      <div
+        class="video-background position-absolute w-100 h-100"
+        style="z-index: 1"
+      >
+        <video
+          id="heroVideo"
+          class="w-100 h-100 object-fit-cover"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="https://via.placeholder.com/1920x1080?text=Construction"
+        >
+          <source src="images/video_preview_h264.mp4" type="video/mp4" />
+          <p>Your browser doesn't support HTML5 video.</p>
+        </video>
+      </div>
+      <!-- Overlay -->
+      <div
+        class="overlay position-absolute w-100 h-100"
+        style="z-index: 2"
+      ></div>
+      <!-- Content -->
+      <div class="container text-center" style="z-index: 3">
+        <h1 class="hero-title display-4 text-white fw-bold">
+          Arc Al Bonian Contracting
+        </h1>
+        <p class="hero-subtitle lead text-white">
+          Leading in construction and development
+        </p>
+        <a href="#about" class="hero-button btn btn-lg">Learn More</a>
+      </div>
+    </section>
+
     <!-- Bootstrap Bundle with Popper -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JavaScript -->
