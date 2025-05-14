@@ -1,0 +1,298 @@
+/* Navbar styling */
+.navbar {
+  background: linear-gradient(
+    to right,
+    #000000 0%,
+    $arc-indigo-600 20%,
+    $arc-blue-600 40%,
+    $arc-teal-500 60%,
+    $arc-green-600 80%,
+    #000000 100%
+  ) !important;
+  background-size: 200% 100% !important;
+  animation: shine 4s ease-in-out infinite;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+// Custom txt-600 class for orange text
+.txt-600 {
+  color: $arc-orange-500 !important;
+}
+
+/* Collapsed navbar styling */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      #000000 0%,
+      $arc-indigo-600 20%,
+      $arc-blue-600 40%,
+      $arc-teal-500 60%,
+      $arc-green-600 80%,
+      #000000 100%
+    );
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    text-align: right;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 1rem 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: inline-block;
+  }
+
+  .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  /* Hamburger button styling */
+  .navbar-toggler {
+    z-index: 1100;
+    border: none;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .navbar-toggler-icon {
+    background-image: none !important;
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-toggler-icon::before {
+    top: -8px;
+  }
+
+  .navbar-toggler-icon::after {
+    bottom: -8px;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Add an overlay to enhance the gradient effect */
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Ensure navbar links are visible against the gradient */
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: $arc-orange-500;
+  text-shadow: 0 0 8px rgba(248, 161, 69, 0.5);
+}
+
+.navbar-light .navbar-brand {
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Hero Section Styles */
+.hero-section {
+  margin-top: -76px; /* Adjust based on navbar height */
+}
+
+/* Placeholder and Video Background */
+.placeholder-image,
+.video-background {
+  transition: opacity 1s ease-in-out;
+}
+
+.placeholder-image {
+  opacity: 1;
+}
+
+.video-background {
+  opacity: 0;
+}
+
+.video-background.show {
+  opacity: 1;
+}
+
+.placeholder-image.hide {
+  opacity: 0;
+}
+
+/* Dark Overlay */
+.overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 2;
+}
+
+/* Hero Content Animations */
+.hero-title,
+.hero-subtitle,
+.hero-button {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-subtitle {
+  animation-delay: 0.3s;
+}
+
+.hero-button {
+  animation-delay: 0.6s;
+  background: linear-gradient(
+    45deg,
+    $arc-indigo-600 0%,
+    $arc-blue-600 50%,
+    $arc-teal-500 100%
+  );
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  transition: left 0.7s ease;
+}
+
+.hero-button:hover::before {
+  left: 100%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

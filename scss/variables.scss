@@ -1,0 +1,42 @@
+// Custom color theme for Arc Al Bonian
+
+// Primary colors
+$arc-blue-100: #e3f2fd;
+$arc-blue-200: #bbdefb;
+$arc-blue-300: #90caf9;
+$arc-blue-400: #64b5f6;
+$arc-blue-500: #42a5f5;
+$arc-blue-600: #2196f3;
+$arc-blue-700: #1e88e5;
+$arc-blue-800: #1976d2;
+$arc-blue-900: #1565c0;
+
+$arc-orange-500: #f8a145;
+$arc-orange-600: #f57c00;
+
+$arc-teal-500: #00838f;
+$arc-teal-600: #00695c;
+
+$arc-indigo-500: #3949ab;
+$arc-indigo-600: #1a237e;
+
+$arc-green-500: #2e7d32;
+$arc-green-600: #004d40;
+
+// Override Bootstrap default variables
+$primary: $arc-blue-600;
+$secondary: $arc-teal-500;
+$success: $arc-green-500;
+$warning: $arc-orange-500;
+$info: $arc-blue-400;
+$danger: #dc3545; // Default Bootstrap color
+$light: #f8f9fa; // Default Bootstrap color
+$dark: #212529; // Default Bootstrap color
+
+// Other Bootstrap variable overrides can go here
+$enable-shadows: true;
+$enable-gradients: true;
+
+// Navbar specific variables
+$navbar-dark-color: rgba(255, 255, 255, 0.95);
+$navbar-dark-hover-color: $arc-orange-500;

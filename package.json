@@ -1,5 +1,15 @@
 {
+  "name": "arc-al-bonian",
+  "version": "1.0.0",
+  "description": "Arc Al Bonian Contracting website",
+  "scripts": {
+    "compile:sass": "sass scss/main.scss:css/style.css --watch",
+    "dev": "sass scss/main.scss:css/style.css --watch"
+  },
   "dependencies": {
     "bootstrap": "^5.3.6"
+  },
+  "devDependencies": {
+    "sass": "^1.88.0"
   }
 }
